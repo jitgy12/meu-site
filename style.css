@@ -1,0 +1,114 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+}
+
+*,
+*::before
+*:;::after{
+    box-sizing: inherit;
+    margin: 0%;
+    padding: 0%;
+}
+
+body{
+
+    align-items: center;
+    background: linear-gradient(320deg, #eb92be, #ffef78, #63c9b4);
+}
+
+.calculadora {
+    background-color: #bd0fcd5d;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 320px;
+}
+
+.tela {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 20px;
+    padding: 5px;
+    font-size: 24px;
+    text-align: right;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.botoes {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.botao {
+    width: 100%;
+    height: 60px;
+    font-size: 24px;
+    background-color: #007bff;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    box-sizing: border-box;
+}
+
+.botao:hover {
+    background-color: hsl(224, 100%, 50%);
+}
+
+.botao.operador {
+    background-color: #28a745;
+}
+
+.botao.operador:hover {
+    background-color: #218838;
+}
+
+.botao.limpar {
+    background-color: #dc3545;
+}
+
+.botao.limpar:hover {
+    background-color: #c82333;
+}
+
+.botao.igual {
+    background-color: #ffc107;
+    font-size: 28px;
+    grid-column: span 3;
+}
+
+.botao.igual:hover {
+    background-color: #e0a800;
+}
+
+@media (max-width: 480px) {
+    .calculadora {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .tela {
+        height: 35px;
+        font-size: 20px;
+    }
+
+    .botao {
+        height: 50px;
+        font-size: 20px;
+    }
+
+    .botao.igual {
+        font-size: 24px;
+    }
+}
